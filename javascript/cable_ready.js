@@ -96,6 +96,8 @@ const shouldMorph = permanentAttributeName => (fromEl, toEl) => {
     return false
   }
 
+  if(fromEl.__x){ window.Alpine.clone(fromEl.__x, toEl) }
+  
   return !permanent
 }
 
